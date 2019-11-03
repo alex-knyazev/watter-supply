@@ -1,0 +1,6 @@
+.waterComposition {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  margin: 20px;
+}

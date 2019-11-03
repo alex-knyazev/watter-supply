@@ -1,0 +1,16 @@
+.inputsList {
+  width: 150px;
+}
+
+.ionBlock {
+  display: flex;
+}
+
+.ionName {
+  width: 40%;
+  margin: 5px 0px;
+}
+
+.ionInput {
+  width: 60%;
+}
