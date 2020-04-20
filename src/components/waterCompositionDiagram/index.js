@@ -1,7 +1,8 @@
-import React from "react";
-import { Decimal } from "decimal.js";
+import React from 'react';
 
-import { IonRow } from "./ionRow";
+import { Decimal } from 'decimal.js';
+
+import { IonRow } from './ionRow';
 
 function findCumulativeEquivalentMassOfIons(ions) {
   return ions.reduce((current, ion) => {
@@ -14,48 +15,43 @@ function WaterCompositionDiagram(props) {
 
   const { kations, anions } = waterCompositionData;
 
-  const notNullKations = kations.filter(kation => kation.equivalentMass > 0);
-  const notNullAnions = anions.filter(anions => anions.equivalentMass > 0);
+  const notNullKations = kations.filter((kation) => kation.equivalentMass > 0);
+  const notNullAnions = anions.filter((anions) => anions.equivalentMass > 0);
 
-  const kationsEquivalentMass = findCumulativeEquivalentMassOfIons(
-    notNullKations
-  );
-  const anionsEquivalentMass = findCumulativeEquivalentMassOfIons(
-    notNullAnions
-  );
+  const kationsEquivalentMass = findCumulativeEquivalentMassOfIons(notNullKations);
+  const anionsEquivalentMass = findCumulativeEquivalentMassOfIons(notNullAnions);
   const maxIonsTypeMass = Math.max(kationsEquivalentMass, anionsEquivalentMass);
 
   return (
     <div
       style={{
-        display: "block",
-        fontFamily: "monospace"
+        display: 'block',
+        fontFamily: 'monospace',
       }}
       className="WaterCompositionDiagram"
     >
       <svg
         style={{
-          display: "block"
+          display: 'block',
         }}
-        width="900px"
-        height="400px"
+        width="1000px"
+        height="600px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
           style={{
-            transform: "translate(0%, 0%)"
+            transform: 'translate(0%, 0%)',
           }}
         ></g>
         <IonRow
-          half={1}
+          verticalPartNumber={1}
           labelsPosition="top"
           type="kations"
           maxIonsTypeMass={maxIonsTypeMass}
           ions={notNullKations}
         />
         <IonRow
-          half={2}
-          labelsPosition="bottom"
+          verticalPartNumber={2}
           type="anions"
           maxIonsTypeMass={maxIonsTypeMass}
           ions={notNullAnions}

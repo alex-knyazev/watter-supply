@@ -1,103 +1,105 @@
-import { Anion } from "./base";
-import { Compound } from "mendeleev";
+import { Anion } from './base';
+import { Compound } from 'mendeleev';
 
 export default [
   new Anion(
-    "hydrate ion",
+    'hydrate ion',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ O: 1, H: 1 })
+    new Compound({ O: 1, H: 1 }),
+    300,
   ),
 
   new Anion(
-    "fluoride ion",
+    'fluoride ion',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ F: 1 })
+    new Compound({ F: 1 }),
+    500,
   ),
 
   new Anion(
-    "cloride",
+    'cloride',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ Cl: 1 })
+    new Compound({ Cl: 1 }),
   ),
 
   new Anion(
-    "brimide",
+    'brimide',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ Br: 1 })
+    new Compound({ Br: 1 }),
   ),
 
   new Anion(
-    "iodide",
+    'iodide',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ I: 1 })
+    new Compound({ I: 1 }),
   ),
 
   new Anion(
-    "sulfide",
+    'sulfide',
     {
       number: 2,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ S: 1 })
+    new Compound({ S: 1 }),
   ),
 
   new Anion(
-    "nitrate",
+    'nitrate',
     {
       number: 1,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ N: 1, O: 3 })
+    new Compound({ N: 1, O: 3 }),
   ),
 
   new Anion(
-    "carbonate",
+    'carbonate',
     {
       number: 2,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ C: 1, O: 3 })
+    new Compound({ C: 1, O: 3 }),
   ),
 
   new Anion(
-    "silicate",
+    'silicate',
     {
       number: 2,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ Si: 1, O: 3 })
+    new Compound({ Si: 1, O: 3 }),
   ),
 
   new Anion(
-    "sulfate",
+    'sulfate',
     {
       number: 2,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ S: 1, O: 4 })
+    new Compound({ S: 1, O: 4 }),
   ),
 
   new Anion(
-    "phosphate",
+    'phosphate',
     {
       number: 3,
-      sign: "-"
+      sign: '-',
     },
-    new Compound({ P: 1, O: 4 })
-  )
+    new Compound({ P: 1, O: 4 }),
+  ),
 ];

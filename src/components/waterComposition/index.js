@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { waterComposition } from "../../ionsData";
-import WaterCompositionDiagram from "../waterCompositionDiagram";
-import WaterCompositionInputs from "../waterCompositionInputs";
+import WaterCompositionDiagram from '../waterCompositionDiagram';
+import WaterCompositionInputs from '../waterCompositionInputs';
+import { waterComposition } from '../../ionsData';
 
-import "./index.css";
+import './index.css';
 
 export function WaterComposition() {
   const { kations, anions } = waterComposition;
 
   const [waterCompositionData, setWaterCompositionData] = useState({
     kations,
-    anions
+    anions,
   });
 
   function onConcentrationChange(ion, concentration) {
@@ -19,19 +19,15 @@ export function WaterComposition() {
 
     const newWaterCompositionData = {
       kations,
-      anions
+      anions,
     };
 
-    if (ion.type === "kation") {
-      const kation = newWaterCompositionData.kations.find(
-        kation => kation.name === ion.name
-      );
+    if (ion.type === 'kation') {
+      const kation = newWaterCompositionData.kations.find((kation) => kation.name === ion.name);
       kation.setConcentration(concentration);
     }
-    if (ion.type === "anion") {
-      const anion = newWaterCompositionData.anions.find(
-        anion => anion.name === ion.name
-      );
+    if (ion.type === 'anion') {
+      const anion = newWaterCompositionData.anions.find((anion) => anion.name === ion.name);
       anion.setConcentration(concentration);
     }
 

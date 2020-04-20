@@ -1,79 +1,57 @@
-import React from "react";
+import React from 'react';
 
 export function IonName(props) {
-  const { ion, size } = props;
-  // const ionElementsText = ion.getCompaundText("");
+  const { ion } = props;
 
-  let elementsTextSize;
-  let chargeTextSize;
+  const elementsTextSize = '15px';
+  const chargeTextSize = '10px';
 
-  switch (size) {
-    case "big":
-      elementsTextSize = "25px";
-      chargeTextSize = "17px";
-      break;
-    case "small":
-      elementsTextSize = "15px";
-      chargeTextSize = "10px";
-      break;
-    default:
-      elementsTextSize = "20px";
-      chargeTextSize = "14px";
-      break;
-  }
-
-  const ionElementsText = ion.compound.elementsList.map(elementName => {
+  const ionElementsText = ion.compound.elementsList.map((elementName) => {
     const amount = ion.compound.elements[elementName];
     return (
-      <g>
-        <text
+      <tspan key={ion.name + elementName} dominantBaseline="middle" textAnchor="middle">
+        <tspan
           style={{
-            fontSize: elementsTextSize
+            fontSize: elementsTextSize,
           }}
-          dominantBaseline="middle"
-          textAnchor="middle"
         >
           {elementName}
-        </text>
+        </tspan>
         {amount > 1 && (
-          <g>
-            <text
-              style={{
-                fontSize: chargeTextSize,
-                transform: `translate(-2%, -50%)`
-              }}
-              dominantBaseline="middle"
-              textAnchor="middle"
-            >
-              {amount}
-            </text>
-          </g>
+          <tspan
+            style={{
+              fontSize: chargeTextSize,
+              textAnchor: 'middle',
+              dominantBaseline: 'hanging',
+            }}
+          >
+            {amount}
+          </tspan>
         )}
-      </g>
+      </tspan>
     );
   });
 
   const group = (
-    <g
-      style={{
-        display: "inline-block"
-      }}
-    >
-      <g>{ionElementsText}</g>
+    <svg height="35px" width="100px">
       <text
         style={{
-          display: "inline-block",
-          fontSize: chargeTextSize,
-          transform: `translate(${ion.charge.number > 1 ? 3.5 : 2}%, -100%)`
+          transform: `translate(20%, 50%)`,
         }}
-        dominantBaseline="middle"
-        textAnchor="middle"
       >
-        {ion.charge.number > 1 ? ion.charge.number : ""}
+        {ionElementsText}
+      </text>
+      <text
+        style={{
+          display: 'inline-block',
+          fontSize: chargeTextSize,
+          transform: `translate(32%, 35%)`,
+        }}
+      >
+        {ion.charge.number > 1 ? ion.charge.number : ''}
         {ion.charge.sign}
       </text>
-      {/* </g> */}
-    </g>
+    </svg>
   );
 
   return group;

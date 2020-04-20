@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.css";
-import { WaterComposition } from "./components/waterComposition";
+import React from 'react';
+import './App.css';
+import { WaterComposition } from './components/waterComposition';
 
 function App() {
   return (

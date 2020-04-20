@@ -1,184 +1,186 @@
-import { Kation } from "./base";
-import { Compound } from "mendeleev";
+import { Kation } from './base';
+import { Compound } from 'mendeleev';
 
 export default [
   new Kation(
-    "hydrogenium",
+    'hydrogenium',
     {
       number: 1,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ H: 1 })
+    new Compound({ H: 1 }),
+    350,
   ),
 
   new Kation(
-    "natrium",
+    'natrium',
     {
       number: 1,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Na: 1 })
+    new Compound({ Na: 1 }),
+    200,
   ),
 
   new Kation(
-    "magnesium",
+    'magnesium',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Mg: 1 })
+    new Compound({ Mg: 1 }),
   ),
 
   new Kation(
-    "calcium",
+    'calcium',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Ca: 1 })
+    new Compound({ Ca: 1 }),
   ),
 
   new Kation(
-    "strantium",
+    'strantium',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Sr: 1 })
+    new Compound({ Sr: 1 }),
   ),
 
   new Kation(
-    "barium",
+    'barium',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Ba: 1 })
+    new Compound({ Ba: 1 }),
   ),
 
   new Kation(
-    "stannum",
+    'stannum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Sn: 1 })
+    new Compound({ Sn: 1 }),
   ),
 
   new Kation(
-    "plumbum",
+    'plumbum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Pb: 1 })
+    new Compound({ Pb: 1 }),
   ),
 
   new Kation(
-    "alumium",
+    'alumium',
     {
       number: 3,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Al: 1 })
+    new Compound({ Al: 1 }),
   ),
 
   new Kation(
-    "cromium",
+    'cromium',
     {
       number: 3,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Cr: 1 })
+    new Compound({ Cr: 1 }),
   ),
 
   new Kation(
-    "marganum",
+    'marganum',
     {
       number: 3,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Mn: 1 })
+    new Compound({ Mn: 1 }),
   ),
 
   new Kation(
-    "feurum_v2",
+    'feurum_v2',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Fe: 1 })
+    new Compound({ Fe: 1 }),
   ),
 
   new Kation(
-    "feurum_v3",
+    'feurum_v3',
     {
       number: 3,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Fe: 1 })
+    new Compound({ Fe: 1 }),
   ),
 
   new Kation(
-    "cobaltum",
+    'cobaltum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Co: 1 })
+    new Compound({ Co: 1 }),
   ),
 
   new Kation(
-    "niccolum",
+    'niccolum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Ni: 1 })
+    new Compound({ Ni: 1 }),
   ),
 
   new Kation(
-    "cuprum",
+    'cuprum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Cu: 1 })
+    new Compound({ Cu: 1 }),
   ),
 
   new Kation(
-    "zincum",
+    'zincum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Zn: 1 })
+    new Compound({ Zn: 1 }),
   ),
 
   new Kation(
-    "cadmium",
+    'cadmium',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Cd: 1 })
+    new Compound({ Cd: 1 }),
   ),
 
   new Kation(
-    "hydrargyrum",
+    'hydrargyrum',
     {
       number: 2,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Hg: 1 })
+    new Compound({ Hg: 1 }),
   ),
 
   new Kation(
-    "argentum",
+    'argentum',
     {
       number: 1,
-      sign: "+"
+      sign: '+',
     },
-    new Compound({ Hg: 1 })
-  )
+    new Compound({ Hg: 1 }),
+  ),
 ];

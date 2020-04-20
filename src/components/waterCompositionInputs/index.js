@@ -1,25 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import { IonName } from "./ionName";
+import { IonName } from './ionName';
 
-import "./index.css";
+import './index.css';
 
 function WaterCompositionInputs(props) {
   const { waterCompositionData, onConcentrationChange } = props;
   const { kations, anions } = waterCompositionData;
 
-  const kationsListItems = kations.map(kation => {
+  const kationsListItems = kations.map((kation) => {
     return (
-      <li className="ionBlock">
-        <p className="ionName">
-          <IonName ion={kation} size="small" />
-        </p>
+      <li key={kation.name} className="ionBlock">
+        <div className="ionName">
+          <IonName ion={kation} />
+        </div>
         <input
           className="ionInput"
           type="number"
-          onChange={e =>
-            onConcentrationChange(kation, parseFloat(e.target.value))
-          }
+          onChange={(e) => onConcentrationChange(kation, parseFloat(e.target.value))}
           min="0"
           step="50"
           value={kation.concentration}
@@ -28,20 +26,18 @@ function WaterCompositionInputs(props) {
     );
   });
 
-  const anionsListItems = anions.map(anion => {
+  const anionsListItems = anions.map((anion) => {
     return (
-      <li className="ionBlock">
-        <p className="ionName">
-          <IonName ion={anion} size="small" />
-        </p>
+      <li key={anion.name} className="ionBlock">
+        <div className="ionName">
+          <IonName ion={anion} />
+        </div>
         <input
           className="ionInput"
           type="number"
           step="50"
           min="0"
-          onChange={e =>
-            onConcentrationChange(anion, parseFloat(e.target.value))
-          }
+          onChange={(e) => onConcentrationChange(anion, parseFloat(e.target.value))}
           value={anion.concentration}
         />
       </li>
@@ -51,9 +47,9 @@ function WaterCompositionInputs(props) {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "auto auto",
-        fontFamily: "monospace"
+        display: 'grid',
+        gridTemplateColumns: 'auto auto',
+        fontFamily: 'monospace',
       }}
       className="WaterCompositionInputs"
     >
